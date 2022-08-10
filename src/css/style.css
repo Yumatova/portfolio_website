@@ -69,7 +69,9 @@ header {
   background-color: #ffe4c4;
   text-align: center;
   padding: 10px 0;
-}``
+   margin: 10px;
+   border-bottom: 3px solid #4a4a4a;
+}
 .container {
   padding: 0 15px;
 }
@@ -101,4 +103,10 @@ nav>ul>li>a:hover {
 }
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+body {
+  background-color: #ffe4c4;
+  padding: 10px 0;
+   margin: 10px;
+   border-bottom: 3px solid #4a4a4a;
 }
