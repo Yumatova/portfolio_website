@@ -72,9 +72,11 @@ header {
   background-color: #ffe4c4;
   text-align: center;
   padding: 10px 0;
+
    margin: 10px;
    border-bottom: 3px solid #4a4a4a;
 }
+
 .container {
   padding: 0 15px;
 }
@@ -113,6 +115,7 @@ body {
    margin: 10px;
    border-bottom: 3px solid #4a4a4a;
 }
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -191,3 +194,4 @@ X-large devices (1440px or larger)
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
+
