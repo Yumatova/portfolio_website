@@ -133,7 +133,7 @@ Medium devices (640px and larger)
     float: right;
     margin-top: 4px;
   }
-}
+
 body {
    font-size: 18px; /* the font size for headers will update automatically bc of em values */
  }
@@ -146,12 +146,12 @@ body {
 [class*="col-"] {
   float: left;
 }
-
+}
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
-}
+
 .col-ld-7 {
 width: 58.3%;
 }
@@ -163,7 +163,7 @@ width: 41.66%;
   margin-left: auto;
   margin-right: auto;
 }
-
+}
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
@@ -194,4 +194,3 @@ X-large devices (1440px or larger)
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
-
