@@ -112,6 +112,11 @@ nav>ul>li>a:hover {
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 body {
   background-color: #ffe4c4;
   padding: 10px 0;
@@ -148,8 +153,10 @@ body {
 }
 [class*="col-"] {
   float: left;
+  padding: 10px;
 }
 }
+
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
