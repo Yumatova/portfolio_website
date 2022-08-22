@@ -106,6 +106,10 @@ header {
   border-bottom: 3px solid #4a4a4a;
 }
 
+.logo {
+  max-width: 150px;
+}
+
 .container {
   padding: 0 15px;
 }
@@ -164,8 +168,11 @@ body {
   border-bottom: 3px solid #4a4a4a;
 }
 
-.logo {
-  max-width: 150px;
+
+
+.col-33 {
+  width: 33%;
+  float: left;
 }
 
 /* ==============================
