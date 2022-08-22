@@ -1,21 +1,30 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   background-color: #ffffff;
   font-family: 'Noto Sans', sans-serif;
-  font-size: 16px; /* Sets the font size to 16px */
-  font-weight: 300; /* Sets the font weight to 300 */
-  line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  font-weight: 300;
+  /* Sets the font weight to 300 */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 * the font-size */
   color: #4a4a4a;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   line-height: 1.4;
 }
+
 h1 {
   font-size: 2.75em;
   font-weight: 700;
+  text-align: center;
 }
 
 h2 {
@@ -27,101 +36,143 @@ h3 {
   font-size: 1.75em;
   font-weight: 400;
 }
+
 h4 {
   font-size: 1.35em;
   font-weight: 400;
 }
+
 img {
   width: 100%;
   max-width: 100%;
-height: auto;
+  height: auto;
 }
+
 a {
   color: #ff7f50;
-  text-decoration: none; /* No underlining */
+  text-decoration: none;
+  /* No underlining */
 }
+
 a:hover {
   color: #cc6540;
-  text-decoration: underline; /* Underlining when hovering over a link */
+  text-decoration: underline;
+  /* Underlining when hovering over a link */
 }
-a:visited { /* visited link */
+
+a:visited {
+  /* visited link */
   color: #ff7f50;
 }
-a:active { /* selected link */
+
+a:active {
+  /* selected link */
   color: #994c30;
 }
+
 a:hover,
 a:focus {
   color: #cc6540;
   text-decoration: underline;
 }
+
 .button {
-  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  display: inline-block;
+  /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #ff7f50;
-  color: #ffffff; /* needed to override the default link color */
+  color: #ffffff;
+  /* needed to override the default link color */
   font-weight: 400;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid #994c30; /* width of the border, type, color */
+  border-bottom: 2px solid #994c30;
+  /* width of the border, type, color */
   transition: 0.2s;
   transition-property: opacity;
 }
+
 .button:hover {
-  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  opacity: 0.8;
+  /* Reduces the opacity of the button to 80% */
   text-decoration: none;
 }
+
 /* Layout styling */
 header {
-  background-color: #ffe4c4;
+  background-color: #ffffff;
   text-align: center;
   padding: 10px 0;
+  margin: 10px;
+  border-bottom: 3px solid #4a4a4a;
+}
 
-   margin: 10px;
-   border-bottom: 3px solid #4a4a4a;
+.logo {
+  max-width: 150px;
 }
 
 .container {
   padding: 0 15px;
 }
+
 .row {
-  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+  margin: 25px 0;
+  /* 25px top and bottom, 0 left and right */
 }
+
 #hero h1 {
-  text-align: center; /* Centers text */
+  text-align: center;
+  /* Centers text */
 }
-nav > ul {
+
+nav>ul {
   list-style-type: none;
   padding: 0;
 }
-nav > ul > li {
+
+nav>ul>li {
   display: inline-block;
 }
-nav > ul > li > a {
+
+nav>ul>li>a {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
   color: #4a4a4a;
 }
+
 nav>ul>li>a:hover {
   transition: 0.3s;
   background-color: #ffffff;
 }
+
 #hero {
-  background-color: #ffe4c4;
+  background-color: #ffffff;
+  text-align: center;
 }
+
 .row {
-  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+  margin: 25px 0;
+  /* 25px top and bottom, 0 left and right */
 }
+
 .row::after {
   content: "";
   clear: both;
   display: table;
 }
+
 body {
-  background-color: #ffe4c4;
+  background-color: #ffffff;
   padding: 10px 0;
-   margin: 10px;
-   border-bottom: 3px solid #4a4a4a;
+  margin: 10px;
+  border-bottom: 3px solid #4a4a4a;
+}
+
+
+
+.col-33 {
+  width: 33%;
+  float: left;
 }
 
 /* ==============================
@@ -129,11 +180,11 @@ Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
   header {
-    text-align: unset;
+    text-align: center;
     padding: 20px 0 13px;
     margin-left: auto;
-   margin-right: auto;
-   margin-top: 0;
+    margin-right: auto;
+    margin-top: 0;
   }
 
   nav {
@@ -142,19 +193,23 @@ Medium devices (640px and larger)
     margin-top: 4px;
   }
 
-body {
-   font-size: 18px; /* the font size for headers will update automatically bc of em values */
- }
- #hero span {
+  body {
+    font-size: 18px;
+    /* the font size for headers will update automatically bc of em values */
+  }
+
+  #hero span {
     display: block;
   }
+
   .col-md-6 {
-  width: 50%;
-}
-[class*="col-"] {
-  float: left;
-  padding: 10px;
-}
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
 }
 
 /* ==============================
@@ -162,27 +217,36 @@ Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
 
-.col-ld-7 {
-width: 58.3%;
+  .col-lg-7 {
+    width: 58.3%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-.col-ld-5 {
-width: 41.66%;
-}
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-}
+
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {
-}
+@media only screen and (min-width: 1440px) {}
+
 @keyframes color-change {
-  from {fill: #edc655;}
-  to {fill: #f76414;}
+  from {
+    fill: #edc655;
+  }
+
+  to {
+    fill: #f76414;
+  }
 }
+
 .sun {
   animation-duration: 4s;
   animation-name: color-change;
@@ -190,17 +254,31 @@ X-large devices (1440px or larger)
   animation-direction: alternate;
   animation-timing-function: linear;
 }
+
 @keyframes cloud-move {
-  from {transform: translate(0,50px);}
-  to {transform: translate(200px,50px);}
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
 }
+
 .cloud-front {
   animation: 30s cloud-move infinite alternate linear;
 }
+
 @keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
 }
+
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
