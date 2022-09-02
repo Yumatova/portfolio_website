@@ -111,6 +111,7 @@ header {
   height: 500px;
 }
 
+
 .logo {
   max-width: 150px;
 }
@@ -178,6 +179,7 @@ body {
 .col-33 {
   width: 33%;
   float: left;
+
 }
 
 footer ul {
