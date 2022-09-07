@@ -14,6 +14,8 @@ body {
   color: #4a4a4a;
 }
 
+
+
 h1,
 h2,
 h3,
@@ -101,7 +103,9 @@ a:focus {
 header {
   background-color: #ffffff;
 
-  padding: 10px 0;
+
+  padding: 10px 0 4px;
+
   margin: 10px;
   border-bottom: 3px solid #4a4a4a;
 }
@@ -134,8 +138,12 @@ header {
 nav>ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
+main {
+  padding-top: 56px;
+}
 
 
 nav>ul>li>a {
@@ -173,7 +181,23 @@ body {
   border-bottom: 3px solid #4a4a4a;
 }
 
+.navtoggle li:not(:last-child) {
+  display: none;
+  /* Hide all navigation elements except for hamburger icon in mobile view */
+}
 
+.navtoggle,
+.navtoggle.responsive {
+  position: relative;
+  padding-right: 0;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+}
 
 .col-33 {
   width: 33%;
@@ -201,10 +225,26 @@ Medium devices (640px and larger)
     margin-top: 0;
   }
 
+  .logo {
+    max-width: 250px;
+  }
+
   nav {
     width: auto;
     float: right;
     margin-top: 4px;
+  }
+
+  nav>ul {
+    margin: 1em 0;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
   }
 
   body {
@@ -226,6 +266,7 @@ Medium devices (640px and larger)
   }
 }
 
+
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
@@ -233,6 +274,15 @@ Large devices (1024px or larger)
 
   .col-lg-7 {
     width: 58.3%;
+  }
+
+
+  nav>ul>li {
+    display: inline-block;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
   }
 
 
@@ -250,15 +300,18 @@ Large devices (1024px or larger)
     }
   }
 
-  /* ==============================
+
+
+/* ==============================
 X-large devices (1440px or larger)
 ================================= */
-  @media only screen and (min-width: 1440px) {}
+@media only screen and (min-width: 1440px) {
 
   @keyframes color-change {
     from {
       fill: #edc655;
     }
+
 
     to {
       fill: #f76414;
@@ -300,4 +353,6 @@ X-large devices (1440px or larger)
   .cloud-back {
     animation: 34s cloud-move-reverse infinite alternate linear;
   }
+
+}
 
