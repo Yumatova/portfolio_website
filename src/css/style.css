@@ -14,6 +14,8 @@ body {
   color: #4a4a4a;
 }
 
+
+
 h1,
 h2,
 h3,
@@ -100,7 +102,7 @@ a:focus {
 /* Layout styling */
 header {
   background-color: #ffffff;
-  padding: 10px 0;
+  padding: 10px 0 4px;
   margin: 10px;
   border-bottom: 3px solid #4a4a4a;
 }
@@ -112,7 +114,6 @@ header {
 
 .logo {
   max-width: 150px;
-  min-width: 641px;
 }
 
 .container {
@@ -132,10 +133,12 @@ header {
 nav>ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
-
-
+main {
+  padding-top: 56px;
+}
 
 nav>ul>li>a {
   padding: 0 15px;
@@ -172,7 +175,23 @@ body {
   border-bottom: 3px solid #4a4a4a;
 }
 
+.navtoggle li:not(:last-child) {
+  display: none;
+  /* Hide all navigation elements except for hamburger icon in mobile view */
+}
 
+.navtoggle,
+.navtoggle.responsive {
+  position: relative;
+  padding-right: 0;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+}
 
 .col-33 {
   width: 33%;
@@ -199,10 +218,26 @@ Medium devices (640px and larger)
     margin-top: 0;
   }
 
+  .logo {
+    max-width: 250px;
+  }
+
   nav {
     width: auto;
     float: right;
     margin-top: 4px;
+  }
+
+  nav>ul {
+    margin: 1em 0;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
   }
 
   body {
@@ -224,6 +259,7 @@ Medium devices (640px and larger)
   }
 }
 
+
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
@@ -235,22 +271,24 @@ Large devices (1024px or larger)
 
   nav>ul>li {
     display: inline-block;
-
-    .col-lg-5 {
-      width: 41.66%;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
 
-  /* ==============================
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* ==============================
 X-large devices (1440px or larger)
 ================================= */
-  @media only screen and (min-width: 1440px) {}
+@media only screen and (min-width: 1440px) {
 
   @keyframes color-change {
     from {
@@ -297,3 +335,4 @@ X-large devices (1440px or larger)
   .cloud-back {
     animation: 34s cloud-move-reverse infinite alternate linear;
   }
+}
