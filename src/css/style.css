@@ -100,6 +100,7 @@ a:focus {
 /* Layout styling */
 header {
   background-color: #ffffff;
+
   padding: 10px 0;
   margin: 10px;
   border-bottom: 3px solid #4a4a4a;
@@ -113,6 +114,7 @@ header {
 .logo {
   max-width: 150px;
   min-width: 641px;
+
 }
 
 .container {
@@ -133,7 +135,6 @@ nav>ul {
   list-style-type: none;
   padding: 0;
 }
-
 
 
 
@@ -177,6 +178,7 @@ body {
 .col-33 {
   width: 33%;
   float: left;
+
 }
 
 footer ul {
@@ -232,6 +234,7 @@ Large devices (1024px or larger)
   .col-lg-7 {
     width: 58.3%;
   }
+
 
   nav>ul>li {
     display: inline-block;
@@ -297,3 +300,4 @@ X-large devices (1440px or larger)
   .cloud-back {
     animation: 34s cloud-move-reverse infinite alternate linear;
   }
+
