@@ -103,7 +103,9 @@ a:focus {
 header {
   background-color: #ffffff;
 
+
   padding: 10px 0 4px;
+
   margin: 10px;
   border-bottom: 3px solid #4a4a4a;
 }
@@ -115,6 +117,8 @@ header {
 
 .logo {
   max-width: 150px;
+  min-width: 641px;
+
 }
 
 .container {
@@ -140,6 +144,7 @@ nav>ul {
 main {
   padding-top: 56px;
 }
+
 
 nav>ul>li>a {
   padding: 0 15px;
@@ -181,11 +186,13 @@ body {
   /* Hide all navigation elements except for hamburger icon in mobile view */
 }
 
+
 .navtoggle,
 .navtoggle.responsive {
   position: relative;
   padding: 24px 0 0;
 }
+
 
 .navtoggle li .icon {
   position: absolute;
@@ -193,6 +200,7 @@ body {
   top: 2px;
   font-size: 20px;
 }
+
 
 .navtoggle.responsive li:last-child {
   padding: 0 0 10px;
@@ -203,6 +211,7 @@ body {
   padding: 10px 0;
   border-top: 1px solid rgba(109, 43, 19, 0.5);
 }
+
 
 .col-33 {
   width: 33%;
@@ -244,13 +253,21 @@ Medium devices (640px and larger)
     margin: 1em 0;
   }
 
+
   .navtoggle li:last-child {
     display: none;
   }
 
+
   .navtoggle li:not(:last-child) {
     display: inline-block;
   }
+
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
 
   body {
     font-size: 18px;
@@ -290,12 +307,22 @@ Large devices (1024px or larger)
     width: 41.66%;
   }
 
-  .container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+
+  nav>ul>li {
+    display: inline-block;
+
+    .col-lg-5 {
+      width: 41.66%;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
-}
+
+
 
 
 /* ==============================
@@ -307,6 +334,7 @@ X-large devices (1440px or larger)
     from {
       fill: #edc655;
     }
+
 
     to {
       fill: #f76414;
@@ -348,4 +376,6 @@ X-large devices (1440px or larger)
   .cloud-back {
     animation: 34s cloud-move-reverse infinite alternate linear;
   }
+
 }
+
