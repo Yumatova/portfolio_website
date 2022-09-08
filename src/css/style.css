@@ -184,7 +184,7 @@ body {
 .navtoggle,
 .navtoggle.responsive {
   position: relative;
-  padding-right: 0;
+  padding: 24px 0 0;
 }
 
 .navtoggle li .icon {
@@ -192,6 +192,16 @@ body {
   right: 0;
   top: 2px;
   font-size: 20px;
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(109, 43, 19, 0.5);
 }
 
 .col-33 {
@@ -234,12 +244,12 @@ Medium devices (640px and larger)
     margin: 1em 0;
   }
 
-  .navtoggle li:not(:last-child) {
-    display: inline-block;
-  }
-
   .navtoggle li:last-child {
     display: none;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
   }
 
   body {
