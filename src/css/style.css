@@ -186,11 +186,13 @@ body {
   /* Hide all navigation elements except for hamburger icon in mobile view */
 }
 
+
 .navtoggle,
 .navtoggle.responsive {
   position: relative;
-  padding-right: 0;
+  padding: 24px 0 0;
 }
+
 
 .navtoggle li .icon {
   position: absolute;
@@ -198,6 +200,18 @@ body {
   top: 2px;
   font-size: 20px;
 }
+
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(109, 43, 19, 0.5);
+}
+
 
 .col-33 {
   width: 33%;
@@ -239,13 +253,21 @@ Medium devices (640px and larger)
     margin: 1em 0;
   }
 
-  .navtoggle li:not(:last-child) {
-    display: inline-block;
-  }
 
   .navtoggle li:last-child {
     display: none;
   }
+
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
 
   body {
     font-size: 18px;
@@ -299,6 +321,7 @@ Large devices (1024px or larger)
       margin-right: auto;
     }
   }
+
 
 
 
