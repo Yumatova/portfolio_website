@@ -117,8 +117,6 @@ header {
 
 .logo {
   max-width: 150px;
-  min-width: 641px;
-
 }
 
 .container {
@@ -310,17 +308,19 @@ Large devices (1024px or larger)
 
   nav>ul>li {
     display: inline-block;
-
-    .col-lg-5 {
-      width: 41.66%;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
   }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 
 
 
@@ -378,4 +378,3 @@ X-large devices (1440px or larger)
   }
 
 }
-
