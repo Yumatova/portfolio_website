@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #ffffff;
   font-family: 'Noto Sans', sans-serif;
@@ -51,7 +55,7 @@ img {
 }
 
 a {
-  color: #ff7f50;
+  color: #270b01;
   text-decoration: none;
   /* No underlining */
 }
@@ -64,7 +68,7 @@ a:hover {
 
 a:visited {
   /* visited link */
-  color: #ff7f50;
+  color: #270b01;
 }
 
 a:active {
@@ -74,14 +78,14 @@ a:active {
 
 a:hover,
 a:focus {
-  color: #cc6540;
+  color: #f8ac90;
   text-decoration: underline;
 }
 
 .button {
   display: inline-block;
   /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #ff7f50;
+  background-color: #270b01;
   color: #ffffff;
   /* needed to override the default link color */
   font-weight: 400;
@@ -94,9 +98,24 @@ a:focus {
 }
 
 .button:hover {
-  opacity: 0.8;
+  opacity: 0.5;
   /* Reduces the opacity of the button to 80% */
   text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #270b01;
+  color: #ffffff;
+  /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #994c30;
+  /* width of the border, type, color */
+  transition: 0.2s;
+  transition-property: opacity;
 }
 
 /* Layout styling */
@@ -104,10 +123,13 @@ header {
   background-color: #ffffff;
 
 
-  padding: 10px 0 4px;
+  padding: 10px 0 0px;
 
-  margin: 10px;
-  border-bottom: 3px solid #4a4a4a;
+  margin: 0px;
+  border-bottom: 0.5px solid #4a4a4a;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .profile-photo {
@@ -115,8 +137,15 @@ header {
   height: 500px;
 }
 
+main {
+  padding-top: 133px;
+}
+
 .logo {
   max-width: 150px;
+  width: 100px;
+  height: 100px;
+
 }
 
 .container {
@@ -188,7 +217,6 @@ body {
 .navtoggle,
 .navtoggle.responsive {
   position: relative;
-  padding: 24px 0 0;
 }
 
 
@@ -197,8 +225,12 @@ body {
   right: 0;
   top: 2px;
   font-size: 20px;
+  padding-right: 0;
 }
 
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
 
 .navtoggle.responsive li:last-child {
   padding: 0 0 10px;
@@ -210,6 +242,11 @@ body {
   border-top: 1px solid rgba(109, 43, 19, 0.5);
 }
 
+nav>ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
 .col-33 {
   width: 33%;
@@ -225,20 +262,43 @@ footer ul li {
   display: inline;
 }
 
+.button.contact {
+  display: inline-block;
+  /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #270b01;
+  color: #ffffff;
+  /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #994c30;
+  /* width of the border, type, color */
+  transition: 0.2s;
+  transition-property: opacity;
+}
+
+.button.contact:hover {
+  background-color: #270b01;
+  color: #ffffff;
+}
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
   header {
     text-align: center;
-    padding: 20px 0 13px;
+    padding: 0px 0 13px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
+    width: 100%;
   }
 
   .logo {
     max-width: 250px;
+    float: left;
+    margin-top: 10px;
   }
 
   nav {
@@ -266,6 +326,9 @@ Medium devices (640px and larger)
     display: none;
   }
 
+  nav>ul {
+    margin: 1em 0;
+  }
 
   body {
     font-size: 18px;
